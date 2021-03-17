@@ -72,9 +72,9 @@ public class HashTable<K, D> {
         TableEntry<K,D> newPair = new TableEntry<>(key, newData);
         for (int i = 0; i < bucketList.size(); i++) {
             TableEntry curPair = bucketList.get(i);
-            //this or the one below
             if (curPair.equals(newPair)) {
                 curPair.data = newData;
+                break;
             }
         }
         return true;

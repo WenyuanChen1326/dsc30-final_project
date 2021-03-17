@@ -112,7 +112,7 @@ public class FADAF<K extends Comparable<? super K>, D> {
                     output.add(current);
                 }
                 else {
-                    if (!current.equals(predecessor)) {
+                    if (current.compareTo(predecessor) != 0) {
                         output.add(current);
                     }
                 }
@@ -139,7 +139,7 @@ public class FADAF<K extends Comparable<? super K>, D> {
                     output.add(current);
             }
             else {
-                if (!current.equals(predecessor)) {
+                if (current.compareTo(predecessor) != 0) {
                     if (valueLow > 0 && valueHigh < 0) {
                         output.add(current);
                     }
