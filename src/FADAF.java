@@ -151,10 +151,16 @@ public class FADAF<K extends Comparable<? super K>, D> {
     }
 
     public K getMinKey() {
+        if (size() == 0) {
+            return null;
+        }
         return tree.findExtreme(false).key;
     }
 
     public K getMaxKey() {
+        if (size() == 0) {
+            return null;
+        }
         return tree.findExtreme(true).key;
     }
 }
